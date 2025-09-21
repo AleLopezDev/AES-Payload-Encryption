@@ -15,7 +15,7 @@ bool checkPadding(unsigned char payload[], size_t sizePayload) {
                : false;
 }
 
-// AES necesita que el payload sea multiplo de 16, en caso de que no lo sea necesitamos rellenarlo
+
 void fillPadding(unsigned char payload[], size_t sizePayload, unsigned char **newPayload, size_t *newSize) {
     size_t size = ((sizePayload + (15)) / 16) * 16;
 
@@ -67,7 +67,7 @@ bool encriptar(unsigned char payload[], size_t sizePayload, unsigned char **encr
         printf("0x%02X ", iv[i]);
     }
 
-    uint8_t key[16] = "Ponlecorazonpepr";
+    uint8_t key[16] = "extraterrestrial";
 
 
     struct AES_ctx ctx;
